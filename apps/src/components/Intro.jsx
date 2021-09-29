@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Woman from "../Images/casal-modelo-png-2.png";
+import AnimatedShapes from "../components/AnimatedShapes";
+
 const Container = styled.div`
   height: calc(100vh-50px);
   display: flex;
@@ -29,35 +32,37 @@ const Info = styled.div`
   display: flex;
   align-items: center;
   margin-top: 50px;
-  
+
   justify-content: space-between;
 `;
 const Button = styled.button`
-padding: 15px;
-background-color: darkblue;
-color: white;
-border-radius: 10px;
-font-weight: bold;
-border-color: transparent;
-letter-spacing: 2px;
-cursor: pointer;
+  padding: 15px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  border-color: transparent;
+  letter-spacing: 2px;
+  cursor: pointer;
 `;
 
-const Contact=styled.div`
-display: flex;
-flex-direction: column;
-
-`
-const Phone =styled.span`
-color:#f0667d;
-font-weight: bold;
-`
-const ContactText =styled.span`
-color:gray;
-`
+const Contact = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Phone = styled.span`
+  color: #f0667d;
+  font-weight: bold;
+`;
+const ContactText = styled.span`
+  color: gray;
+`;
 
 const Righrt = styled.div`
   width: 40%;
+`;
+const Image = styled.img`
+  width: 100%;
 `;
 
 const Intro = () => {
@@ -74,12 +79,16 @@ const Intro = () => {
         <Info>
           <Button>START A PROJECT</Button>
           <Contact>
-              <Phone> Call Us (+994) 60-123-23-23</Phone>
-              <ContactText> Any questions and Concern</ContactText>
+            <Phone> Call Us (+994) 60-123-23-23</Phone>
+            <ContactText> Any questions and Concern</ContactText>
           </Contact>
         </Info>
       </Left>
-      <Righrt> b</Righrt>
+      <Righrt>
+        {" "}
+        <Image src={Woman} />
+      </Righrt>{" "}
+      <AnimatedShapes />
     </Container>
   );
 };
