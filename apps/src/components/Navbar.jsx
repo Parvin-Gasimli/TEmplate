@@ -25,6 +25,9 @@ display: flex;
 list-style: none;
 
 margin: 0;
+@media only screen and (max-width:480px){
+  display: none;
+}
 
 
 `;

@@ -4,10 +4,12 @@ import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import Feature from "./components/Feature";
 import Service from "./components/Service";
-import Price from './components/Price'
+import Price from "./components/Price";
+import Contact from './components/Contact'
+import Footer from "./components/Footer";
 
 const Container = styled.div`
-  height: 100vh;
+  
   overflow: hidden;
   position: relative;
 `;
@@ -22,22 +24,24 @@ const Shape = css`
 `;
 
 const IntroShape = styled.div`
-${Shape}
+  ${Shape}
   clip-path: polygon(64% 0, 100% 0, 100% 100%, 46% 100%);
   background-color: crimson;
-
- 
 `;
 
 const FeatureShape = styled.div`
-${Shape}
+  ${Shape}
   clip-path: polygon(0 0, 55% 0, 33% 100%, 0% 100%);
   background-color: pink;
-
- 
+`;
+const PriceShape = styled.div`
+  ${Shape}
+  clip-path: polygon(33% 0, 100% 0, 100% 100%, 67% 100%);
+  background-color: crimson;
 `;
 
 const App = () => {
+  const smallScreen =window.screen.width <=480 ? true:false
   return (
     <>
       <Container>
@@ -47,17 +51,23 @@ const App = () => {
       </Container>
       <Container>
         <Feature />
-        <FeatureShape/>
+        <FeatureShape />
       </Container>
       <Container>
-        <Service/>
-      
+        <Service />
       </Container>
       <Container>
-        <Price/>
-
-        
+        <Price />
+        <PriceShape />
       </Container>
+      <Container>
+     <Contact/>
+       
+      </Container>
+      <Container>
+        <Footer/>
+      </Container>
+     
     </>
   );
 };

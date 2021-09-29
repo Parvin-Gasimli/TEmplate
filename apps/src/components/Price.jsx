@@ -5,6 +5,7 @@ const Container=styled.div`
 padding-top: 100px;
 height: 100vh;
 display: flex;
+align-items: center;
 justify-content: center;
 `
 
@@ -12,10 +13,10 @@ const Price = () => {
     return (
         <>
         <Container>
-            <PriceCard/>
-            <PriceCard/>
-            <PriceCard/>
-            
+            <PriceCard price="10" type =" Basic"/>
+            <PriceCard price="20" type =" Premium"/>
+            <PriceCard price="40" type =" Advance"/>
+
 
         </Container>
             

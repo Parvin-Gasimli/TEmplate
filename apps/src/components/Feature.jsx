@@ -5,9 +5,15 @@ import AnimatedShapes from "./AnimatedShapes";
 
 const Container = styled.div`
   display: flex;
+  @media only screen and (max-width:480px){
+    flex-direction: column;
+    padding: 30px 20px;
+  }
 `;
 const Left = styled.div`
-
+ @media only screen and (max-width:480px){
+   display: none;
+  }
   width: 50%;
 `;
 const Right = styled.div`
@@ -16,6 +22,8 @@ const Right = styled.div`
 flex-direction: column;
 justify-content: center;
 margin-top: 30px;
+@media only screen and (max-width:480px){
+  width:100%;}
 `;
 const Image = styled.img`
   width: 80%;
@@ -27,6 +35,9 @@ const SubTitle = styled.span`
 font-size: 24px;
 font-style: italic;
 color: #333;
+@media only screen and (max-width:480px){
+  font-size: 45px;
+  }
 `;
 const Desc = styled.p`
 font-size:20px;

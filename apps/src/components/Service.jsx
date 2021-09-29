@@ -22,14 +22,23 @@ const Container=styled.div`
     display: flex;
     padding-top: 100px;
     height: 100%;
+    @media only screen and (max-width:480px){
+        flex-direction: column;
+}
 `
 const Left=styled.div`
 position: relative;
  width:50%;
+ @media only screen and (max-width:480px){
+  display: none;
+  }
 `
 
 const Right=styled.div`
   width: 50%;
+  @media only screen and (max-width:480px){
+  width: 100%;
+  }
 `
 const Image=styled.img`
 display: ${props=>props.open&&"none"};
@@ -40,6 +49,10 @@ const Wrapper =styled.div`
 padding: 50px;
 display: flex;
 flex-direction: column;
+@media only screen and (max-width:480px){
+  padding: 20px;
+  width: 100%;
+}
 
 `
 const Title=styled.h1`
